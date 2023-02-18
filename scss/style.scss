@@ -1,0 +1,42 @@
+/*=====================================================================
+                  Project - Dima Soymchenko
+=====================================================================*/
+// fonts imports
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("../fonts/San Francisco Pro Display Semibold"),
+    local("../fonts/San-Francisco-Pro-Display-Semibold"),
+    url("../fonts/SFProDisplay-Semibold.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Semibold.woff") format("woff"),
+    url("../fonts/SFProDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("../fonts/San Francisco Pro Display Medium"),
+    local("../fonts/San-Francisco-Pro-Display-Medium"),
+    url("../fonts/SFProDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Medium.woff") format("woff"),
+    url("../fonts/SFProDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: local("../fonts/San Francisco Pro Display Regular"),
+    local("../fonts/San-Francisco-Pro-Display-Regular"),
+    url("../fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/SFProDisplay-Regular.woff") format("woff"),
+    url("../fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// style imports
+@import "_nullstyle";
