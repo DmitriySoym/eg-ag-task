@@ -40,3 +40,268 @@
 
 // style imports
 @import "_nullstyle";
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  // height: 100vh;
+  min-height: 100%;
+  padding-top: 60px;
+  overflow: hidden;
+  background: url(../assets/development/left-corner-picture.png) no-repeat left
+      top,
+    url(../assets/development/right-corner-picture.png) no-repeat right top;
+}
+
+.header {
+  &__logo {
+    width: 190px;
+    height: 60px;
+    margin: 0 auto;
+  }
+}
+
+.main {
+  padding-top: 93px;
+}
+
+.development {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  &__title {
+    height: 75px;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 104%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #162c4e;
+    opacity: 0.39;
+  }
+
+  &__description {
+    padding-bottom: 32px;
+    padding-top: 8px;
+  }
+
+  &__description-text {
+    max-width: 423px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__timer {
+    display: flex;
+    max-width: 588px;
+    width: 100%;
+    height: 130.18px;
+  }
+
+  &__timer-item {
+    position: relative;
+    flex: 1 1 auto;
+    width: 132px;
+    height: 129px;
+    font-weight: 600;
+    font-size: 72px;
+    line-height: 100%;
+    color: #162c4e;
+    text-align: center;
+  }
+
+  &__timer-item:first-child::after {
+    content: "Days";
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 54.12px;
+    background: url(../assets/development/timer.png) no-repeat center / contain;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__timer-item:nth-child(2)::after {
+    content: "Hours";
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 54.12px;
+    background: url(../assets/development/timer.png) no-repeat center / contain;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__timer-item:nth-child(2)::before {
+    content: ":";
+    position: absolute;
+    left: -8px;
+  }
+
+  &__timer-item:nth-child(3)::after {
+    content: "Minutes";
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 54.12px;
+    background: url(../assets/development/timer.png) no-repeat center / contain;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__timer-item:nth-child(3)::before {
+    content: ":";
+    position: absolute;
+    left: -8px;
+  }
+
+  &__timer-item:last-child::after {
+    content: "Seconds";
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 54.12px;
+    background: url(../assets/development/timer.png) no-repeat center / contain;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  &__timer-item:last-child::before {
+    content: ":";
+    position: absolute;
+    left: -8px;
+  }
+
+  &__events {
+    width: 338px;
+    height: 99px;
+    padding-top: 70px;
+  }
+
+  &__events-text {
+    text-align: center;
+    padding-bottom: 12px;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__events-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 240px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 150%;
+    color: #ffffff;
+    padding: 0 20px 0 28px;
+    background-color: #1d4169;
+    border-radius: 40px;
+  }
+
+  &__events-arrow {
+    cursor: pointer;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 192px;
+  background-color: #162c4e;
+
+  &__form {
+    position: relative;
+    display: block;
+    width: 440px;
+    height: 59px;
+    margin-left: calc(50% - 220px);
+  }
+
+  &__input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
+    border-radius: 40px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 16px 27px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+  }
+
+  &__input::placeholder {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &__form-btn {
+    position: absolute;
+    top: calc(50% - 22px);
+    right: 7px;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    border-radius: 50%;
+  }
+
+  &__form-arrow {
+    display: block;
+  }
+
+  &__btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 111px;
+    color: #ffffff;
+    gap: 10px;
+    width: 160px;
+    height: 30px;
+  }
+}
