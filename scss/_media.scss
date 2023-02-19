@@ -1,0 +1,105 @@
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    background: url(../assets/development/left-corner-picture-992.png) no-repeat
+        left top,
+      url(../assets/development/right-corner-picture-992.png) no-repeat right
+        top;
+  }
+
+  .development {
+    padding-top: 100px;
+
+    &__title {
+      padding-top: 166px;
+      font-size: 36px;
+    }
+
+    &__description {
+      padding-bottom: 40px;
+      padding-top: 20px;
+    }
+
+    &__description-text {
+      max-width: 286px;
+      font-size: 16px;
+    }
+
+    &__timer {
+      max-width: 358px;
+
+      height: 82px;
+    }
+
+    &__timer-item {
+      height: 82px;
+      font-size: 36px;
+    }
+
+    &__timer-item:first-child::after {
+      content: "DD";
+      left: 15px;
+      width: 64px;
+      height: 40px;
+      font-size: 12px;
+    }
+
+    &__timer-item:nth-child(2)::after {
+      content: "HH";
+      left: 15px;
+      width: 64px;
+      height: 40px;
+      font-size: 12px;
+    }
+
+    &__timer-item:nth-child(3)::after {
+      content: "MM";
+      left: 15px;
+      width: 64px;
+      height: 40px;
+      font-size: 12px;
+    }
+
+    &__timer-item:last-child::after {
+      content: "SS";
+      left: 15px;
+      width: 64px;
+      height: 40px;
+      font-size: 12px;
+    }
+  }
+
+  .event {
+    padding: 40px 0 160px 0;
+
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  .subscription {
+    flex-direction: column;
+    padding: 40px 0;
+
+    &__form {
+      margin-left: 0;
+      width: 360px;
+      height: 41px;
+    }
+
+    &__btn {
+      margin-right: 0;
+    }
+
+    &__form-btn {
+      top: calc(50% - 17px);
+      right: 4px;
+      width: 33px;
+      height: 33px;
+    }
+
+    &__input,
+    &__input::placeholder {
+      font-size: 14px;
+    }
+  }
+}

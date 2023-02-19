@@ -116,31 +116,26 @@ h6 {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
-  padding-top: 60px;
   overflow: hidden;
   background: url(../assets/development/left-corner-picture.png) no-repeat left top, url(../assets/development/right-corner-picture.png) no-repeat right top;
-}
-
-.header__logo {
-  width: 190px;
-  height: 60px;
-  margin: 0 auto;
-}
-
-.main {
-  padding-top: 93px;
 }
 
 .development {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  padding-top: 60px;
   align-items: center;
   width: 100%;
   height: 100%;
 }
+.development__logo {
+  width: 190px;
+  height: 60px;
+  margin: 0 auto;
+}
 .development__title {
-  height: 75px;
+  padding-top: 93px;
   font-weight: 700;
   font-size: 72px;
   line-height: 104%;
@@ -257,19 +252,18 @@ h6 {
   position: absolute;
   left: -8px;
 }
-.development__events {
-  width: 338px;
-  height: 99px;
-  padding-top: 70px;
+
+.event {
+  padding: 70px 0;
 }
-.development__events-text {
+.event__text {
   text-align: center;
   padding-bottom: 12px;
   font-size: 18px;
   line-height: 150%;
   color: rgba(0, 0, 0, 0.8);
 }
-.development__events-btn {
+.event__btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -283,11 +277,11 @@ h6 {
   background-color: #1d4169;
   border-radius: 40px;
 }
-.development__events-arrow {
+.event__arrow {
   cursor: pointer;
 }
 
-.footer {
+.subscription {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -295,14 +289,14 @@ h6 {
   height: 192px;
   background-color: #162c4e;
 }
-.footer__form {
+.subscription__form {
   position: relative;
   display: block;
   width: 440px;
   height: 59px;
   margin-left: calc(50% - 220px);
 }
-.footer__input {
+.subscription__input {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -316,7 +310,7 @@ h6 {
   font-size: 18px;
   line-height: 150%;
 }
-.footer__input::-moz-placeholder {
+.subscription__input::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -324,7 +318,7 @@ h6 {
   line-height: 150%;
   color: rgba(0, 0, 0, 0.6);
 }
-.footer__input::placeholder {
+.subscription__input::placeholder {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -332,7 +326,7 @@ h6 {
   line-height: 150%;
   color: rgba(0, 0, 0, 0.6);
 }
-.footer__form-btn {
+.subscription__form-btn {
   position: absolute;
   top: calc(50% - 22px);
   right: 7px;
@@ -344,10 +338,10 @@ h6 {
   background-color: red;
   border-radius: 50%;
 }
-.footer__form-arrow {
+.subscription__form-arrow {
   display: block;
 }
-.footer__btn {
+.subscription__btn {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -356,4 +350,96 @@ h6 {
   gap: 10px;
   width: 160px;
   height: 30px;
+}
+
+.test {
+  width: 100px;
+  height: 500px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    background: url(../assets/development/left-corner-picture-992.png) no-repeat left top, url(../assets/development/right-corner-picture-992.png) no-repeat right top;
+  }
+  .development {
+    padding-top: 100px;
+  }
+  .development__title {
+    padding-top: 166px;
+    font-size: 36px;
+  }
+  .development__description {
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+  .development__description-text {
+    max-width: 286px;
+    font-size: 16px;
+  }
+  .development__timer {
+    max-width: 358px;
+    height: 82px;
+  }
+  .development__timer-item {
+    height: 82px;
+    font-size: 36px;
+  }
+  .development__timer-item:first-child::after {
+    content: "DD";
+    left: 15px;
+    width: 64px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .development__timer-item:nth-child(2)::after {
+    content: "HH";
+    left: 15px;
+    width: 64px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .development__timer-item:nth-child(3)::after {
+    content: "MM";
+    left: 15px;
+    width: 64px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .development__timer-item:last-child::after {
+    content: "SS";
+    left: 15px;
+    width: 64px;
+    height: 40px;
+    font-size: 12px;
+  }
+  .event {
+    padding: 40px 0 160px 0;
+  }
+  .event__text {
+    font-size: 16px;
+  }
+  .subscription {
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .subscription__form {
+    margin-left: 0;
+    width: 360px;
+    height: 41px;
+  }
+  .subscription__btn {
+    margin-right: 0;
+  }
+  .subscription__form-btn {
+    top: calc(50% - 17px);
+    right: 4px;
+    width: 33px;
+    height: 33px;
+  }
+  .subscription__input::-moz-placeholder {
+    font-size: 14px;
+  }
+  .subscription__input, .subscription__input::placeholder {
+    font-size: 14px;
+  }
 }
