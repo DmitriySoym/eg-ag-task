@@ -14,6 +14,7 @@
 
 @media screen and (max-width: 992.98px) {
   .wrapper {
+    padding-top: 100px;
     background: url(../assets/development/left-corner-picture-992.png) no-repeat
         left top,
       url(../assets/development/right-corner-picture-992.png) no-repeat right
@@ -21,8 +22,6 @@
   }
 
   .development {
-    padding-top: 100px;
-
     &__title {
       padding-top: 166px;
       font-size: 36px;
@@ -120,6 +119,7 @@
 
 @media screen and (max-width: 568px) {
   .wrapper {
+    padding-top: 80px;
     background: url(../assets/development/left-corner-picture-568.png) no-repeat
         left top,
       url(../assets/development/right-corner-picture-568.png) no-repeat right
@@ -127,8 +127,6 @@
   }
 
   .development {
-    padding-top: 80px;
-
     &__logo,
     &__logo img {
       width: 128px;
@@ -151,12 +149,3 @@
     }
   }
 }
-
-// @media screen and (max-width: 350px) {
-//   .development {
-//     &__timer {
-//       max-width: 200px;
-//       height: 82px;
-//     }
-//   }
-// }

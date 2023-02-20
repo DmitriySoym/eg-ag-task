@@ -54,7 +54,7 @@ function genetatePopup() {
 }
 
 const test = document.querySelector(".development__title");
-console.log(document.body.lastChild);
+
 test.addEventListener("click", genetatePopup);
 
 document.body.onclick = (event) => {
@@ -67,3 +67,17 @@ document.body.onclick = (event) => {
     document.body.classList.remove("stop-scrolling");
   }
 };
+
+// const emailValidation = () => {
+//   return {
+//     required: "*email is required",
+//     pattern: {
+//       value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
+//       message: "Enter a valid email",
+//     },
+//     maxLength: {
+//       value: 30,
+//       message: "*max 30 characters",
+//     },
+//   };
+// };

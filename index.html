@@ -9,13 +9,13 @@
   </head>
   <body>
     <div class="wrapper">
-      <section class="development">
-        <div class="development__logo">
-          <a href="index.html"
-            ><img src="./assets/development/logo.png" alt="logo"
-          /></a>
-        </div>
+      <header class="header">
+        <a href="index.html"
+          ><img src="./assets/development/logo.png" alt="logo"
+        /></a>
+      </header>
 
+      <main class="development">
         <h1 class="development__title">Under Construction</h1>
         <div class="development__description">
           <p class="development__description-text">
@@ -29,27 +29,28 @@
           <li class="development__timer-item" id="minutes"></li>
           <li class="development__timer-item" id="seconds"></li>
         </ul>
-      </section>
 
-      <div class="event">
-        <p class="event__text">Check our event page when you wait:</p>
-        <a
-          href="https://soymchenko.netlify.app/"
-          target="_blank"
-          class="event__btn"
-          ><span>Go to the event</span>
-          <img
-            class="event__arrow"
-            src="./assets/development/arrow-right.svg"
-            alt="arrow" />
-        </a>
-      </div>
+        <div class="event">
+          <p class="event__text">Check our event page when you wait:</p>
+          <a
+            href="https://soymchenko.netlify.app/"
+            target="_blank"
+            class="event__btn"
+            ><span>Go to the event</span>
+            <img
+              class="event__arrow"
+              src="./assets/development/arrow-right.svg"
+              alt="arrow" />
+          </a>
+        </div>
+      </main>
 
-      <section class="subscription">
-        <form action="#" class="subscription__form">
+      <footer class="subscription">
+        <form action="#" class="subscription__form" method="post">
           <input
             class="subscription__input"
             type="email"
+            name="email"
             placeholder="Enter your Email and get notified" />
           <button type="submit" class="subscription__form-btn">
             <img
@@ -62,22 +63,8 @@
           ><span>Other Events</span>
           <img src="./assets/footer/arrow-down.svg" alt="arrow" />
         </a>
-      </section>
+      </footer>
     </div>
-
-    <!-- <div class="popup open">
-      <div class="popup__body">
-        <img
-          class="popup__close"
-          src="./assets/popup/close-icon.svg"
-          alt="close" />
-        <h2 class="popup__title">SUCCESS!</h2>
-        <p class="popup__text">
-          You have successfully subscribed to the email newsletter
-        </p>
-        <button class="popup__btn">Close</button>
-      </div>
-    </div> -->
 
     <div class="test"></div>
     <script src="./js/main.js"></script>
