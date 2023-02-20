@@ -21,7 +21,7 @@ const timeValue = setInterval(function () {
 
 //popup================================
 
-function genetatePopup() {
+function genetatePopup(title, color, text) {
   document.body.classList.add("stop-scrolling");
   const popup = document.createElement("div");
   document.body.append(popup);
@@ -38,13 +38,13 @@ function genetatePopup() {
 
   const popuptitle = document.createElement("h2");
   popuptitle.classList.add("popup__title");
-  popuptitle.innerText = "SUCCESS!";
+  popuptitle.style.color = color;
+  popuptitle.innerText = title;
   popupBody.append(popuptitle);
 
   const popupText = document.createElement("p");
   popupText.classList.add("popup__text");
-  popupText.innerText =
-    "You have successfully subscribed to the email newsletter";
+  popupText.innerText = text;
   popupBody.append(popupText);
 
   const popupBtn = document.createElement("div");
@@ -68,16 +68,66 @@ document.body.onclick = (event) => {
   }
 };
 
-// const emailValidation = () => {
-//   return {
-//     required: "*email is required",
-//     pattern: {
-//       value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/,
-//       message: "Enter a valid email",
-//     },
-//     maxLength: {
-//       value: 30,
-//       message: "*max 30 characters",
-//     },
-//   };
-// };
+// form validation and sending data
+
+const submitBtn = document.querySelector(".subscription__form-btn");
+const input = document.querySelector(".subscription__input");
+
+submitBtn.onclick = (event) => {
+  event.preventDefault();
+  sendForm();
+  input.value = "";
+};
+
+function validateEmail(value) {
+  const validation = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/;
+
+  let validEmail;
+
+  value.match(validation) ? (validEmail = true) : (validEmail = false);
+
+  return validEmail;
+}
+
+const sendForm = async () => {
+  const email = document.querySelector(".subscription__input");
+  let isEmailValid = validateEmail(email.value);
+
+  const success = {
+    title: "SUCCESS!",
+    color: "#162c4e",
+    text: "You have successfully subscribed to the email newsletter",
+  };
+  const fail = {
+    title: "FAIL!",
+    color: "red",
+    text: `Something went wrong. Please, try again later.`,
+  };
+
+  const wrongEmail = {
+    title: "Ettention!",
+    color: "red",
+    text: "Please, enter a correct email.",
+  };
+
+  if (isEmailValid) {
+    await fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      // body: JSON.stringify(email.value),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    })
+      .then(() => {
+        genetatePopup(success.title, success.color, success.text);
+      })
+      .catch(() => {
+        genetatePopup(fail.title, fail.color, fail.text);
+      });
+  } else {
+    setTimeout(
+      () => genetatePopup(wrongEmail.title, wrongEmail.color, wrongEmail.text),
+      1000
+    );
+  }
+};

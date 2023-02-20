@@ -112,15 +112,6 @@ h6 {
 }
 
 /*--------------------*/
-.wrapper {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100%;
-  padding-top: 60px;
-  overflow: hidden;
-  background: url(../assets/development/left-corner-picture.png) no-repeat left top, url(../assets/development/right-corner-picture.png) no-repeat right top;
-}
-
 header {
   width: 190px;
   height: 60px;
@@ -278,9 +269,16 @@ header {
   padding: 0 20px 0 28px;
   background-color: #1d4169;
   border-radius: 40px;
+  transition: all 0.3s linear;
 }
 .event__arrow {
   cursor: pointer;
+}
+.event__btn:hover {
+  filter: drop-shadow(0px 4px 10px rgba(51, 51, 51, 0.5));
+}
+.event__btn:hover img {
+  transform: translateX(10px);
 }
 
 .subscription {
@@ -339,6 +337,13 @@ header {
   justify-content: center;
   background-color: red;
   border-radius: 50%;
+  transition: all 0.3s linear;
+}
+.subscription__form-btn:hover {
+  filter: drop-shadow(0px 4px 10px rgba(255, 0, 0, 0.5));
+}
+.subscription__form-btn:hover img {
+  transform: translateX(5px);
 }
 .subscription__form-arrow {
   display: block;
@@ -352,6 +357,19 @@ header {
   gap: 10px;
   width: 160px;
   height: 30px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  padding-top: 60px;
+  overflow: hidden;
+  background: url(../assets/development/left-corner-picture.png) no-repeat left top, url(../assets/development/right-corner-picture.png) no-repeat right top;
+}
+
+img {
+  transition: all 0.3s ease-in-out;
 }
 
 .popup {
