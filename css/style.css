@@ -359,6 +359,14 @@ h6 {
 
 @media screen and (max-width: 1200px) {
   .wrapper {
+    background: url(../assets/development/left-corner-picture.png) no-repeat left -40px top -20px, url(../assets/development/right-corner-picture.png) no-repeat right top;
+  }
+  .development__title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 992.98px) {
+  .wrapper {
     background: url(../assets/development/left-corner-picture-992.png) no-repeat left top, url(../assets/development/right-corner-picture-992.png) no-repeat right top;
   }
   .development {
@@ -421,6 +429,7 @@ h6 {
   .subscription {
     flex-direction: column;
     padding: 40px 0;
+    height: 160px;
   }
   .subscription__form {
     margin-left: 0;
@@ -441,5 +450,28 @@ h6 {
   }
   .subscription__input, .subscription__input::placeholder {
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 568px) {
+  .wrapper {
+    background: url(../assets/development/left-corner-picture-568.png) no-repeat left top, url(../assets/development/right-corner-picture-568.png) no-repeat right top;
+  }
+  .development {
+    padding-top: 80px;
+  }
+  .development__logo, .development__logo img {
+    width: 128px;
+    height: 40px;
+  }
+  .development__title {
+    padding-top: 66px;
+    width: 320px;
+  }
+  .subscription {
+    padding: 30px 0;
+    height: 141px;
+  }
+  .subscription__form {
+    width: 280px;
   }
 }
