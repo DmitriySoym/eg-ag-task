@@ -126,7 +126,6 @@ h6 {
   justify-content: start;
   padding-top: 60px;
   align-items: center;
-  width: 100%;
   height: 100%;
 }
 .development__logo {
@@ -164,8 +163,9 @@ h6 {
 }
 .development__timer-item {
   position: relative;
-  flex: 1 1 auto;
-  width: 132px;
+  flex: 0 1 auto;
+  max-width: 132px;
+  width: 100%;
   height: 129px;
   font-weight: 600;
   font-size: 72px;
@@ -180,7 +180,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 132px;
+  width: 100%;
   height: 54.12px;
   background: url(../assets/development/timer.png) no-repeat center/contain;
   box-sizing: border-box;
@@ -196,7 +196,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 132px;
+  width: 100%;
   height: 54.12px;
   background: url(../assets/development/timer.png) no-repeat center/contain;
   box-sizing: border-box;
@@ -217,7 +217,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 132px;
+  width: 100%;
   height: 54.12px;
   background: url(../assets/development/timer.png) no-repeat center/contain;
   box-sizing: border-box;
@@ -238,7 +238,7 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 132px;
+  width: 100%;
   height: 54.12px;
   background: url(../assets/development/timer.png) no-repeat center/contain;
   box-sizing: border-box;
@@ -267,7 +267,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 240px;
+  max-width: 240px;
+  width: 100%;
   height: 60px;
   margin: 0 auto;
   font-size: 18px;
@@ -395,28 +396,28 @@ h6 {
   .development__timer-item:first-child::after {
     content: "DD";
     left: 15px;
-    width: 64px;
+    max-width: 64px;
     height: 40px;
     font-size: 12px;
   }
   .development__timer-item:nth-child(2)::after {
     content: "HH";
     left: 15px;
-    width: 64px;
+    max-width: 64px;
     height: 40px;
     font-size: 12px;
   }
   .development__timer-item:nth-child(3)::after {
     content: "MM";
     left: 15px;
-    width: 64px;
+    max-width: 64px;
     height: 40px;
     font-size: 12px;
   }
   .development__timer-item:last-child::after {
     content: "SS";
     left: 15px;
-    width: 64px;
+    max-width: 64px;
     height: 40px;
     font-size: 12px;
   }
@@ -465,13 +466,14 @@ h6 {
   }
   .development__title {
     padding-top: 66px;
-    width: 320px;
+    max-width: 320px;
   }
   .subscription {
     padding: 30px 0;
     height: 141px;
   }
   .subscription__form {
-    width: 280px;
+    max-width: 280px;
+    width: 100%;
   }
 }

@@ -40,7 +40,6 @@
 
     &__timer {
       max-width: 358px;
-
       height: 82px;
     }
 
@@ -52,7 +51,7 @@
     &__timer-item:first-child::after {
       content: "DD";
       left: 15px;
-      width: 64px;
+      max-width: 64px;
       height: 40px;
       font-size: 12px;
     }
@@ -60,7 +59,7 @@
     &__timer-item:nth-child(2)::after {
       content: "HH";
       left: 15px;
-      width: 64px;
+      max-width: 64px;
       height: 40px;
       font-size: 12px;
     }
@@ -68,7 +67,7 @@
     &__timer-item:nth-child(3)::after {
       content: "MM";
       left: 15px;
-      width: 64px;
+      max-width: 64px;
       height: 40px;
       font-size: 12px;
     }
@@ -76,7 +75,7 @@
     &__timer-item:last-child::after {
       content: "SS";
       left: 15px;
-      width: 64px;
+      max-width: 64px;
       height: 40px;
       font-size: 12px;
     }
@@ -138,7 +137,7 @@
 
     &__title {
       padding-top: 66px;
-      width: 320px;
+      max-width: 320px;
     }
   }
 
@@ -147,7 +146,17 @@
     height: 141px;
 
     &__form {
-      width: 280px;
+      max-width: 280px;
+      width: 100%;
     }
   }
 }
+
+// @media screen and (max-width: 350px) {
+//   .development {
+//     &__timer {
+//       max-width: 200px;
+//       height: 82px;
+//     }
+//   }
+// }
