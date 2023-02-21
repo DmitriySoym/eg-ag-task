@@ -69,7 +69,7 @@ document.body.onclick = (event) => {
 };
 
 // form validation and sending data
-
+const URL = "https://63f469072213ed989c41f642.mockapi.io/egorov-agency/emails";
 const submitBtn = document.querySelector(".subscription__form-btn");
 const input = document.querySelector(".subscription__input");
 
@@ -90,8 +90,7 @@ function validateEmail(value) {
 }
 
 const sendForm = async () => {
-  const email = document.querySelector(".subscription__input");
-  let isEmailValid = validateEmail(email.value);
+  let isEmailValid = validateEmail(input.value);
 
   const success = {
     title: "SUCCESS!",
@@ -111,13 +110,15 @@ const sendForm = async () => {
   };
 
   if (isEmailValid) {
-    await fetch("https://jsonplaceholder.typicode.com/posts", {
+    await fetch(URL, {
       method: "POST",
-      // body: JSON.stringify(email.value),
+      body: JSON.stringify({ email: input.value }),
       headers: {
         "Content-type": "application/json; charset=UTF-8",
       },
     })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
       .then(() => {
         genetatePopup(success.title, success.color, success.text);
       })
@@ -127,7 +128,7 @@ const sendForm = async () => {
   } else {
     setTimeout(
       () => genetatePopup(wrongEmail.title, wrongEmail.color, wrongEmail.text),
-      1000
+      750
     );
   }
 };
