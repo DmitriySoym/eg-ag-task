@@ -1,8 +1,14 @@
 @media screen and (max-width: 1200px) {
   .wrapper {
-    background: url(../assets/development/left-corner-picture.png) no-repeat
-        left -40px top -20px,
-      url(../assets/development/right-corner-picture.png) no-repeat right top;
+    &::before {
+      background: url(../assets/development/left-corner-picture.png) no-repeat
+        left -40px top -20px;
+    }
+
+    &::after {
+      background: url(../assets/development/right-corner-picture.png) no-repeat
+        right top;
+    }
   }
 
   .development {
@@ -15,10 +21,20 @@
 @media screen and (max-width: 992.98px) {
   .wrapper {
     padding-top: 100px;
-    background: url(../assets/development/left-corner-picture-992.png) no-repeat
-        left top,
-      url(../assets/development/right-corner-picture-992.png) no-repeat right
-        top;
+
+    &::before {
+      max-width: 251px;
+      max-height: 210px;
+      background: url(../assets/development/left-corner-picture-992.png)
+        no-repeat left top;
+    }
+
+    &::after {
+      max-width: 250px;
+      max-height: 243px;
+      background: url(../assets/development/right-corner-picture-992.png)
+        no-repeat right top;
+    }
   }
 
   .development {
@@ -120,10 +136,26 @@
 @media screen and (max-width: 568px) {
   .wrapper {
     padding-top: 80px;
-    background: url(../assets/development/left-corner-picture-568.png) no-repeat
-        left top,
-      url(../assets/development/right-corner-picture-568.png) no-repeat right
-        top;
+
+    &::before {
+      max-width: 178px;
+      max-height: 146px;
+      background: url(../assets/development/left-corner-picture-568.png)
+        no-repeat left top;
+    }
+
+    &::after {
+      max-width: 159px;
+      max-height: 157px;
+      background: url(../assets/development/right-corner-picture-568.png)
+        no-repeat right top;
+    }
+  }
+
+  .header,
+  header img {
+    width: 128px;
+    height: 40px;
   }
 
   .development {

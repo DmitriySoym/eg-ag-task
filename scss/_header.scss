@@ -1,5 +1,12 @@
 header {
+  position: relative;
+  z-index: 2;
   width: 190px;
   height: 60px;
   margin: 0 auto;
+  animation: mainAnimation 1s ease;
+
+  &__logo {
+    cursor: pointer;
+  }
 }

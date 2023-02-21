@@ -22,6 +22,46 @@
   font-weight: 400;
   font-style: normal;
 }
+@keyframes mainAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes titleAnimation {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.39;
+  }
+}
+@keyframes backGroundRight {
+  0% {
+    transform: translate(100%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+@keyframes backGroundLeft {
+  0% {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
 /*Обнуление*/
 * {
   padding: 0;
@@ -113,9 +153,15 @@ h6 {
 
 /*--------------------*/
 header {
+  position: relative;
+  z-index: 2;
   width: 190px;
   height: 60px;
   margin: 0 auto;
+  animation: mainAnimation 1s ease;
+}
+header__logo {
+  cursor: pointer;
 }
 
 .development {
@@ -133,11 +179,18 @@ header {
   text-align: center;
   text-transform: uppercase;
   color: #162c4e;
-  opacity: 0.39;
+  animation: titleAnimation 1s ease;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .development__description {
   padding-bottom: 32px;
   padding-top: 8px;
+  animation: mainAnimation 1s ease;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .development__description-text {
   max-width: 423px;
@@ -152,6 +205,10 @@ header {
   max-width: 588px;
   width: 100%;
   height: 130.18px;
+  animation: mainAnimation 1s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .development__timer-item {
   position: relative;
@@ -247,6 +304,10 @@ header {
 
 .event {
   padding: 70px 0;
+  animation: mainAnimation 0.8s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 .event__text {
   text-align: center;
@@ -359,13 +420,43 @@ header {
   height: 30px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100%;
   padding-top: 60px;
   overflow: hidden;
-  background: url(../assets/development/left-corner-picture.png) no-repeat left top, url(../assets/development/right-corner-picture.png) no-repeat right top;
+}
+.wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 471px;
+  max-height: 418px;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/development/left-corner-picture.png) no-repeat left top;
+  animation-delay: 0.5s;
+  animation: backGroundLeft 1s ease-out;
+}
+.wrapper::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+  max-width: 233px;
+  max-height: 288px;
+  width: 100%;
+  height: 100%;
+  background: url(../assets/development/right-corner-picture.png) no-repeat right top;
+  animation-delay: 0.5s;
+  animation: backGroundRight 1s ease-out;
 }
 
 img {
@@ -447,8 +538,11 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .wrapper {
-    background: url(../assets/development/left-corner-picture.png) no-repeat left -40px top -20px, url(../assets/development/right-corner-picture.png) no-repeat right top;
+  .wrapper::before {
+    background: url(../assets/development/left-corner-picture.png) no-repeat left -40px top -20px;
+  }
+  .wrapper::after {
+    background: url(../assets/development/right-corner-picture.png) no-repeat right top;
   }
   .development__title {
     font-size: 48px;
@@ -457,7 +551,16 @@ img {
 @media screen and (max-width: 992.98px) {
   .wrapper {
     padding-top: 100px;
-    background: url(../assets/development/left-corner-picture-992.png) no-repeat left top, url(../assets/development/right-corner-picture-992.png) no-repeat right top;
+  }
+  .wrapper::before {
+    max-width: 251px;
+    max-height: 210px;
+    background: url(../assets/development/left-corner-picture-992.png) no-repeat left top;
+  }
+  .wrapper::after {
+    max-width: 250px;
+    max-height: 243px;
+    background: url(../assets/development/right-corner-picture-992.png) no-repeat right top;
   }
   .development__title {
     padding-top: 166px;
@@ -542,7 +645,21 @@ img {
 @media screen and (max-width: 568px) {
   .wrapper {
     padding-top: 80px;
-    background: url(../assets/development/left-corner-picture-568.png) no-repeat left top, url(../assets/development/right-corner-picture-568.png) no-repeat right top;
+  }
+  .wrapper::before {
+    max-width: 178px;
+    max-height: 146px;
+    background: url(../assets/development/left-corner-picture-568.png) no-repeat left top;
+  }
+  .wrapper::after {
+    max-width: 159px;
+    max-height: 157px;
+    background: url(../assets/development/right-corner-picture-568.png) no-repeat right top;
+  }
+  .header,
+  header img {
+    width: 128px;
+    height: 40px;
   }
   .development__logo, .development__logo img {
     width: 128px;

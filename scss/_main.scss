@@ -13,12 +13,19 @@
     text-align: center;
     text-transform: uppercase;
     color: #162c4e;
-    opacity: 0.39;
+    animation: titleAnimation 1s ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
 
   &__description {
     padding-bottom: 32px;
     padding-top: 8px;
+    animation: mainAnimation 1s ease;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
 
   &__description-text {
@@ -35,6 +42,10 @@
     max-width: 588px;
     width: 100%;
     height: 130.18px;
+    animation: mainAnimation 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
   }
 
   &__timer-item {
@@ -48,6 +59,8 @@
     line-height: 100%;
     color: #162c4e;
     text-align: center;
+    // animation-duration: 0.5s;
+    // animation: descriptionAnimation 0.8s ease;
   }
 
   &__timer-item:first-child::after {
@@ -139,6 +152,10 @@
 
 .event {
   padding: 70px 0;
+  animation: mainAnimation 0.8s ease;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 
   &__text {
     text-align: center;
