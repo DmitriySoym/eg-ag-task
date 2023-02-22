@@ -64,6 +64,18 @@
     display: block;
   }
 
+  &__btn-text::after {
+    content: "";
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+    height: 2px;
+    width: 0%;
+    left: 50%;
+    transition: width 100ms ease-out;
+    transform: translateX(-50%);
+  }
+
   &__btn {
     display: flex;
     flex-direction: row;
@@ -73,5 +85,15 @@
     gap: 10px;
     width: 160px;
     height: 30px;
+    font-size: 20px;
+    transition: all 0.1s linear;
+
+    &:active .subscription__btn-text::after {
+      width: 100%;
+    }
+    &:active .subscription__btn-image {
+      transition: all 0.1s linear;
+      transform: rotate(180deg);
+    }
   }
 }

@@ -59,8 +59,6 @@
     line-height: 100%;
     color: #162c4e;
     text-align: center;
-    // animation-duration: 0.5s;
-    // animation: descriptionAnimation 0.8s ease;
   }
 
   &__timer-item:first-child::after {
@@ -150,7 +148,7 @@
   }
 }
 
-.event {
+.checkEvent {
   padding: 70px 0;
   animation: mainAnimation 0.8s ease;
   animation-delay: 0.5s;

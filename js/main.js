@@ -145,3 +145,50 @@ const sendForm = async () => {
     );
   }
 };
+
+//accordion==========================
+
+const accordion = document.querySelectorAll(".events__item-info");
+const accordionParent = document.querySelectorAll(".events__item");
+
+accordion.forEach((item) =>
+  item.addEventListener("click", () => {
+    const parent = item.parentElement;
+
+    if (parent.classList.contains("open")) {
+      return;
+    } else {
+      for (const el of accordionParent) {
+        el.classList.remove("open");
+      }
+      for (el of accordion) {
+        el.classList.remove("open");
+      }
+      item.classList.add("open");
+      parent.classList.add("open");
+    }
+  })
+);
+
+// animation of title after page scrolling
+const scrollBtn = document.querySelector(".subscription__btn");
+const animationTarget = document.querySelector(".events__title");
+let animationCount = 0;
+
+scrollBtn.addEventListener("click", () => {
+  if (animationCount > 0) {
+    return;
+  } else {
+    animationTarget.animate(
+      [
+        { transform: "translateY(-100%)", opacity: 0 },
+        { transform: "translateY(0)", opacity: 0.39 },
+      ],
+      {
+        duration: 1000,
+        delay: 300,
+      }
+    );
+    animationCount += 1;
+  }
+});

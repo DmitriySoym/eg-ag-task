@@ -44,6 +44,11 @@
 @import "_header";
 @import "_main";
 @import "_footer";
+@import "_aside";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   overflow-x: hidden;
