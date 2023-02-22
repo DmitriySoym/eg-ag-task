@@ -185,8 +185,7 @@ scrollBtn.addEventListener("click", () => {
         { transform: "translateY(0)", opacity: 0.39 },
       ],
       {
-        duration: 1000,
-        delay: 300,
+        duration: 1350,
       }
     );
     animationCount += 1;
